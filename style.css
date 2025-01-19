@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  color: white;
+  font-family: "Poppins", serif;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.header {
+  height: 9%;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.header > * {
+  padding: 20px 20px 0px 20px;
+}
+.logo {
+  width: 32%;
+  justify-content: left;
+}
+.logo img {
+  height: 35px;
+  background-color: white;
+  border-radius: 40px;
+  object-fit: contain;
+  cursor: pointer;
+}
+.home {
+  width: 32%;
+  justify-content: center;
+}
+.home_icon {
+  height: 43px;
+  background-color: rgba(33, 33, 33, 1);
+  padding: 10px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.search {
+  height: 43px;
+  background-color: rgba(33, 33, 33, 1);
+  padding: 10px;
+  border-radius: 25px;
+  width: 400px;
+}
+.profile {
+  position: relative;
+  width: 32%;
+  justify-content: end;
+}
+.dropdown {
+  position: absolute;
+  /* background-color: #3dfcfad9; */
+  background-color: white;
+  top: 35px;
+  right: 32px;
+  height: 40px;
+  width: 120px;
+  border-radius: 5px;
+  padding: 0px 7px;
+  cursor: pointer;
+}
+.logout {
+  /* color: #676767; */
+  color: #c71717;
+  background: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.searchbar {
+  background: none;
+  border: none;
+  outline: none;
+}
+.left-container {
+  height: 94%;
+  width: 30%;
+  background-color: #121212;
+  color: #b3b3b3;
+  margin-left: 7px;
+  border-radius: 5px;
+}
+.right-container {
+  height: 94%;
+  width: 70%;
+  background-color: #121212;
+  margin: 7px;
+  border-radius: 5px;
+  padding: 30px 15px;
+}
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 11.5%;
+  left: -6px;
+  width: 4vw;
+  margin: 5px;
+  z-index: 1;
+}
+.close {
+  display: none;
+  position: fixed;
+  top: 16%;
+  left: 62%;
+  z-index: 3;
+  transition: all 0.5s ease-out;
+}
+.library-header {
+  margin: 20px;
+  height: 30px;
+}
+.library-heading h6 {
+  font-size: 15px;
+  cursor: pointer;
+}
+.library-section {
+  height: 250px;
+  padding: 7px 7px 0px 7px;
+  overflow-wrap: anywhere;
+  overflow-y: scroll;
+}
+.library-footer {
+  margin: 10px;
+}
+.footer-options {
+  flex-wrap: wrap;
+  /* padding: 5px; */
+  margin: 15px 0px;
+}
+.footer-options a {
+  text-decoration: none;
+  font-size: 10px;
+  color: #b3b3b3;
+}
+.language {
+  width: 8vw;
+  outline: 1px solid;
+  padding: 5px 10px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.language img {
+  width: 1.5vw;
+}
+.language h5 {
+  outline: none;
+  font-size: 1vw;
+}
+.language-btn {
+  all: unset;
+  color: white;
+}
+.albums-heading {
+  text-decoration: none;
+  color: white;
+  font-size: x-large;
+  font-weight: 700;
+}
+.albums-heading:hover {
+  text-decoration: underline;
+}
+.all-albums {
+  list-style: none;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  height: 60vh;
+}
+.all-albums li {
+  height: 250px;
+  width: 170px;
+  padding: 9px;
+  border-radius: 6px;
+}
+.album {
+  margin: 13px 0px;
+  position: relative;
+  cursor: pointer;
+}
+.album:hover {
+  background-color: rgb(97 97 97 / 18%);
+  box-shadow: 3px 3px 10px #121212f5;
+}
+.album img {
+  height: 148px;
+  width: 150px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+.album-info a {
+  text-decoration: none;
+  color: #b3b3b3;
+  font-size: small;
+}
+.album-info a:hover {
+  text-decoration: underline;
+}
+.album-info > a {
+  color: white;
+  font-weight: 400;
+  font-size: 15px;
+  margin-top: 0px;
+}
+.play-icon {
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  /* background-color: #2db72d; */
+  background-color: #3dfbf9;
+  right: 16px;
+  bottom: 68px;
+  padding: 0px 11px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+.album:hover .play-icon {
+  opacity: 1;
+  bottom: 98px;
+}
+
+.play-icon img {
+  height: 20px;
+  width: 15px;
+}
+.play-controlls {
+  padding: 10px 0px;
+}
+.songsList li {
+  list-style: none;
+  font-size: small;
+}
+.songItem img {
+  height: 5vh;
+}
+.songItem {
+  position: relative;
+  /* border: 1px solid grey; */
+  padding: 5px 0px;
+  border-radius: 5px;
+  margin: 5px 0px;
+  cursor: pointer;
+}
+.songItem:hover {
+  background-color: rgb(97 97 97 / 18%);
+  box-shadow: 3px 3px 10px #121212f5;
+}
+.songItem .song-info {
+  font-size: 10px;
+  width: 11vw;
+  overflow-wrap: anywhere;
+}
+.songItem .playnow {
+  position: absolute;
+  right: 10px;
+  font-size: 10px;
+}
+.seekbar {
+  position: relative;
+  bottom: 8px;
+  border-radius: 10px;
+  height: 5px;
+  width: 100%;
+  background-color: white;
+  cursor: pointer;
+}
+.seekbar .circle {
+  height: 13px;
+  width: 13px;
+  background-color: #3dfbf9;
+  border-radius: 50%;
+  position: absolute;
+  left: 0%;
+  bottom: -4px;
+  transition: left 0.3s linear;
+}
+.main-body {
+  height: 80%;
+  width: 100%;
+  position: relative;
+}
+.footer {
+  width: 100%;
+  height: 6%;
+}
+.play {
+  flex-direction: column;
+  justify-content: center;
+  width: 32%;
+}
+.songName,
+.duration_vol {
+  font-size: small;
+  padding: 0px 15px;
+}
+.songName {
+  width: 32%;
+}
+.duration_vol {
+  width: 32%;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+}
+#volume-seekbar {
+  width: 6vw;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 837px) {
+  .left-container {
+    position: absolute;
+    left: -100%;
+    z-index: 2;
+    transition: all 0.5s ease-out;
+  }
+  .right-container {
+    width: 95%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+  }
+  .hamburger {
+    display: block;
+  }
+  .language h5 {
+    display: none;
+  }
+  .language img {
+    width: 100%;
+  }
+  .language {
+    display: flex;
+    justify-content: center;
+    width: 13vw;
+  }
+  .all-albums {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .right-container {
+    text-align: center;
+  }
+  .songName,
+  .duration_vol {
+    font-size: 8px;
+  }
+  .all-albums {
+    justify-content: center;
+  }
+}

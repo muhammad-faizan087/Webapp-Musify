@@ -1,0 +1,39 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bar {
+      fill: #4CAF50;
+      animation: upAndDown 1s infinite;
+    }
+    .bar:nth-child(1) {
+      animation-delay: 0s;
+    }
+    .bar:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+    .bar:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+    .bar:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+    .bar:nth-child(5) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes upAndDown {
+      0%, 100% {
+        height: 20px;
+        y: 40px;
+      }
+      50% {
+        height: 60px;
+        y: 10px;
+      }
+    }
+  </style>
+  <rect class="bar" x="10" y="40" width="10" height="20" rx="2" />
+  <rect class="bar" x="30" y="40" width="10" height="20" rx="2" />
+  <rect class="bar" x="50" y="40" width="10" height="20" rx="2" />
+  <rect class="bar" x="70" y="40" width="10" height="20" rx="2" />
+  <rect class="bar" x="90" y="40" width="10" height="20" rx="2" />
+</svg>

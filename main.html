@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Musify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utility.css" />
+    <link rel="icon" href="images/musify logo.png" type="image/png" />
+  </head>
+  <body>
+    <header class="header flex align-center justify-between">
+      <div class="logo flex align-center gap1">
+        <img src="images/musify logo.png" alt="Musify logo" />
+        <h4 class="title">MUSIFY</h4>
+      </div>
+      <div class="home flex">
+        <span class="home_icon flex align-center">
+          <img src="images/home.svg" alt="Home icon" class="svg" />
+        </span>
+      </div>
+      <div class="profile flex">
+        <img
+          src="images/profile.svg"
+          alt="profile icon"
+          class="profile-img svg"
+        />
+      </div>
+    </header>
+    <main class="main-body flex align-center">
+      <img src="images/hamburger.svg" alt="" class="svg hamburger" />
+      <img src="images/close.svg" alt="" class="svg close" />
+      <div class="left-container">
+        <div class="library-header flex align-center justify-between">
+          <div class="library-heading flex align-center gap1">
+            <span class="library-svg">
+              <img src="images/library.svg" alt="library icon" class="svg" />
+            </span>
+            <h6>Your Library</h6>
+          </div>
+        </div>
+        <div class="library-section scrollbar-class">
+          <ul class="songsList"></ul>
+        </div>
+        <div class="library-footer">
+          <div class="footer-options flex align-center gap1">
+            <div>
+              <a href="#">Legal</a>
+            </div>
+            <div>
+              <a href="#">Safety & Privacy Center</a>
+            </div>
+            <div>
+              <a href="#">Privacy Policy</a>
+            </div>
+            <div>
+              <a href="#">Cookies</a>
+            </div>
+            <div>
+              <a href="#">About Ads</a>
+            </div>
+            <div>
+              <a href="#">Accessibility</a>
+            </div>
+          </div>
+          <div class="language">
+            <button class="language-btn flex align-center">
+              <img src="images/language.svg" alt="language icon" class="svg" />
+              <h5 class="language heading">English</h5>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="right-container">
+        <div class="albums">
+          <div class="albums-header flex align-center justify-between">
+            <a href="#" class="albums-heading">Popular albums and singles</a>
+          </div>
+          <div class="albums-section">
+            <ul class="all-albums flex scrollbar-class"></ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer flex align-center justify-between">
+      <span class="songName"></span>
+      <div class="play flex align-center">
+        <div class="play-controlls">
+          <img id="previous" src="images/previous.svg" alt="" class="svg" />
+          <img
+            id="play-button"
+            src="images/playbar-icon.svg"
+            alt=""
+            class="svg"
+          />
+          <img id="next" src="images/next.svg" alt="" class="svg" />
+        </div>
+        <div class="seekbar">
+          <div class="circle"></div>
+        </div>
+      </div>
+      <div class="duration_vol flex">
+        <span class="songDuration"> </span>
+        <div class="volume flex gap1">
+          <img src="images/volume.svg" alt="" class="svg volume-btn" />
+          <input type="range" name="volume" id="volume-seekbar" width="76px" />
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

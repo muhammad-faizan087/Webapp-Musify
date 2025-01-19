@@ -1,0 +1,35 @@
+.flex {
+  display: flex;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.align-center {
+  align-items: center;
+}
+.gap1 {
+  gap: 10px;
+}
+.svg {
+  filter: invert(1);
+  height: 24px;
+  cursor: pointer;
+}
+.scrollbar-class::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+.scrollbar-class::-webkit-scrollbar-track {
+  background-color: #2c2c2c; /* Track color */
+  border-radius: 10px;
+}
+
+.scrollbar-class::-webkit-scrollbar-thumb {
+  background-color: #444; /* Thumb color */
+  border-radius: 10px;
+  border: 3px solid #2c2c2c; /* Optional: add border for separation effect */
+}
+
+.scrollbar-class::-webkit-scrollbar-thumb:hover {
+  background-color: #666; /* Thumb hover color */
+}
