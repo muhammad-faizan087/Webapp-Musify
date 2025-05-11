@@ -114,12 +114,12 @@ body {
   margin: 5px;
   z-index: 1;
 }
-/* 
-.hamburger {
+
+/* .hamburger {
   display: none;
   position: fixed;
-  top: 1rem; /* instead of 11.5% */
-  left: 1rem; /* instead of -6px */
+  top: 1rem; 
+  left: 1rem; 
   width: 35px;
   height: 35px;
   z-index: 10;
