@@ -120,7 +120,7 @@ body {
 .hamburger {
   display: none;
   position: fixed;
-  top: 10%;
+  top: 8%;
   left: -6px;
   width: 4vw;
   margin: 5px;
@@ -130,7 +130,7 @@ body {
 .close {
   display: none;
   position: fixed;
-  top: 16%;
+  top: 14%;
   left: 62%;
   z-index: 3;
   transition: all 0.5s ease-out;
