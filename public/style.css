@@ -95,7 +95,7 @@ body {
 }
 
 .left-container {
-  min-height: 94%;
+  min-height: 97%;
   width: 30%;
   background-color: #121212;
   color: #b3b3b3;
@@ -109,7 +109,7 @@ body {
 }
 
 .right-container {
-  min-height: 94%;
+  min-height: 97%;
   width: 70%;
   background-color: #121212;
   margin: 7px;
@@ -120,7 +120,7 @@ body {
 .hamburger {
   display: none;
   position: fixed;
-  top: 11%;
+  top: 10%;
   left: -6px;
   width: 4vw;
   margin: 5px;
@@ -333,7 +333,7 @@ body {
 }
 
 .main-body {
-  height: 80%;
+  height: 88vh;
   width: 100%;
   position: relative;
   padding-bottom: 60px;
@@ -393,6 +393,10 @@ body {
     top: 0;
     z-index: 2;
     transition: all 0.5s ease-out;
+  }
+
+  .main-body {
+    height: 79vh;
   }
 
   .right-container {
