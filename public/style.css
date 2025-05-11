@@ -109,7 +109,7 @@ body {
 .hamburger {
   display: none;
   position: fixed;
-  top: 0%;
+  top: 11%;
   left: -6px;
   width: 4vw;
   margin: 5px;
