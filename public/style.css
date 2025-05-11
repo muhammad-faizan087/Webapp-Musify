@@ -333,6 +333,7 @@ body {
 }
 
 .main-body {
+  height: 80%;
   width: 100%;
   position: relative;
   padding-bottom: 60px;
