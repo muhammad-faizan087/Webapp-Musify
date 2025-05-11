@@ -40,18 +40,9 @@ function playSong(track, paused = false) {
 async function getSongs(folder) {
   currentFolder = folder;
   try {
-    let data = await fetch(`${getBaseUrl()}/${currentFolder}/`);
-    // console.log(data);
-    let parsed_data = await data.text();
-    let div = document.createElement("div");
-    div.innerHTML = parsed_data;
-    let anchors = div.getElementsByTagName("a");
-    songs_ = [];
-    for (const a of anchors) {
-      if (a.href.endsWith(".mp3")) {
-        songs_.push(decodeURIComponent(a.href.split(`/${currentFolder}/`)[1]));
-      }
-    }
+    let data = await fetch(`${getBaseUrl()}/${currentFolder}/tracks.json`);
+    let songList = await data.json();
+    songs_ = songList;
 
     let ul = document.querySelector(".songsList");
     ul.innerHTML = "";
@@ -81,52 +72,6 @@ async function getSongs(folder) {
     console.error("Error fetching songs:", error);
   }
 }
-
-// async function displayAlbums() {
-//   try {
-//     let data = await fetch(`${getBaseUrl()}/songs/`);
-//     let parsed_data = await data.text();
-//     let div = document.createElement("div");
-//     div.innerHTML = parsed_data;
-//     let anchors = div.getElementsByTagName("a");
-//     let allAlbums = document.querySelector(".all-albums");
-//     let array = Array.from(anchors);
-
-//     for (let index = 0; index < array.length; index++) {
-//       const a = array[index];
-//       if (a.href.includes("/songs/") && !a.href.includes(".htaccess")) {
-//         let folder = a.href.split("/").slice(-1)[0];
-//         let albumData = await fetch(
-//           `${getBaseUrl()}/songs/${folder}/info.json`
-//         );
-//         let parsed_albumData = await albumData.json();
-//         allAlbums.innerHTML += `
-//           <li data-folder="${folder}" class="album">
-//             <img src="songs/${folder}/cover.jpg" alt="Album pic" />
-//             <div class="play-icon flex align-center">
-//               <img src="images/play-icon.svg" alt="play icon" />
-//             </div>
-//             <div class="album-info">
-//               <a href="#" class="album-name">${parsed_albumData.title}</a>
-//               <div class="artists">
-//                 <a href="#">${parsed_albumData.description}</a>
-//               </div>
-//             </div>
-//           </li>`;
-//       }
-//     }
-
-//     let albums = document.getElementsByClassName("album");
-//     Array.from(albums).forEach((element) => {
-//       element.addEventListener("click", async (item) => {
-//         await getSongs(`songs/${item.currentTarget.dataset.folder}`);
-//         playSong(songs_[0]);
-//       });
-//     });
-//   } catch (error) {
-//     console.error("Error displaying albums:", error);
-//   }
-// }
 
 async function displayAlbums() {
   try {

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "prebuild": "node scripts/generateAlbums.js",
+    "prebuild": "node scripts/generateAlbums.js && node scripts/generateTracks.js",
     "build": "echo 'Static build complete'"
   },
   "repository": {
