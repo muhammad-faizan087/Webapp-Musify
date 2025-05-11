@@ -346,6 +346,10 @@ body {
   cursor: pointer;
 }
 
+.volume {
+  gap: 5px;
+}
+
 @media screen and (max-width: 837px) {
   .left-container {
     position: absolute;
@@ -375,6 +379,9 @@ body {
   }
   .all-albums {
     justify-content: center;
+  }
+  #volume-seekbar {
+    width: 10vw;
   }
 }
 
