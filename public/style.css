@@ -92,6 +92,7 @@ body {
   color: #b3b3b3;
   margin-left: 7px;
   border-radius: 5px;
+  position: relative;
 }
 .left-container.sidebar-visible {
   left: 0;
@@ -108,7 +109,7 @@ body {
 .hamburger {
   display: none;
   position: fixed;
-  top: 12%;
+  top: 0%;
   left: -6px;
   width: 4vw;
   margin: 5px;
