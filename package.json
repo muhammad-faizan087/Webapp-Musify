@@ -1,0 +1,21 @@
+{
+  "name": "webapp-musify",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "node scripts/generateAlbums.js",
+    "build": "echo 'Static build complete'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhammad-faizan087/Webapp-Musify.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muhammad-faizan087/Webapp-Musify/issues"
+  },
+  "homepage": "https://github.com/muhammad-faizan087/Webapp-Musify#readme",
+  "description": ""
+}
