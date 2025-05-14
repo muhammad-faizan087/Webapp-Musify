@@ -14,7 +14,6 @@
         box-sizing: border-box;
       }
       body > * {
-        background-color: beige;
         font-family: "Poppins", serif;
         overflow: hidden;
         padding: 10px 20px;
@@ -93,7 +92,25 @@
         margin-top: 10px;
         color: #666;
       }
-      @media screen and (max-width: 1160px) {
+      @media screen and (max-width: 850px) {
+        .left-container img {
+          height: 70vh;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        .left-container img {
+          height: 60vh;
+        }
+      }
+      @media screen and (max-width: 700px) {
+        .left-container img {
+          height: 50vh;
+        }
+      }
+      @media screen and (max-width: 650px) {
+        .left-container img {
+          height: 40vh;
+        }
         .main {
           flex-direction: column;
           justify-content: center;
